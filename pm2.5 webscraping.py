@@ -12,10 +12,10 @@ time_th = pytz.timezone('Asia/Bangkok')
 #new_update = html_soup.find('td', {'class':'aqiwgt-table-aqiinfo'}).find('span').text
 def insert_todb(update, value1, value2, loca, polution_status):
     try:
-        connection = mysql.connector.connect(host='34.122.124.80',
-                                             database='smart_home',
-                                             user='nsr-admin',
-                                             password='natthapon024299')
+        connection = mysql.connector.connect(host='',
+                                             database='',
+                                             user='',
+                                             password='')
         query = """insert into bu_pm (last_update, pm25, pm10, location, polution_lv) VALUES (%s, %s, %s, %s, %s)"""
         attr = (update, value1, value2, loca, polution_status)
         cursor = connection.cursor()
